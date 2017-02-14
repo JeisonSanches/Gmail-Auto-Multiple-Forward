@@ -1,4 +1,4 @@
-function AutoForward()
+function AutoForward() //
 {
 	var threads = GmailApp.search('is:unread');
 	
@@ -18,13 +18,13 @@ function AutoForward()
 	
 			  MailApp.sendEmail
 			  ({
-			      replyTo: from,
-			      to: "mail1@example.com, mail2@example.com, etc@example.com",
+			      replyTo: from, //reply to the original sender
+			      to: "mail1@example.com, mail2@example.com, etc@example.com", //an array of email addresses can also be used
                   subject: subject,
                   htmlBody: "<blockquote>email sent by <b>"+from+"</b><br></blockquote>"+body,attachments:GmailAttachment,
 		      }); 
           }
 		}
 	}
-    GmailApp.markThreadsRead(threads);
+    GmailApp.markThreadsRead(threads); //mark sent messages as read
 }
