@@ -1,4 +1,4 @@
-function AutoForward() //
+function AutoForward() //Don't forget to add a trigger to the project!
 {
 	var threads = GmailApp.search('is:unread');
 	
